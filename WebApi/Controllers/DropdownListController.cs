@@ -12,6 +12,7 @@ namespace WebApi.Controllers
     {
         Altkamul_LibraryEntities db = new Altkamul_LibraryEntities();
 
+        // get author list
         [HttpGet]
         public IHttpActionResult Index(int id)
         {
@@ -20,6 +21,7 @@ namespace WebApi.Controllers
             return Ok(obj[0].AuthorName);
         }
 
+        // Get all book list
         [HttpGet]
         public IHttpActionResult GetBook()
         {
